@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+  
+</head>
+<body>
+    <div class="container">
+        <div class="logo" style="float: left;">
+            <div class="img"></div>
+        <div class="box">
+            <div class="clock">
+                <span id="hrs">00 </span>
+                <p>Hours</p>
+                <span>:</span>
+                <span id="min">00</span>
+                <p>Minutes</p>
+                <span>:</span>
+                <span id="sec">00</span>
+                <p>second</p>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script>
+
+        let hrs=document.getElementById('hrs');
+        let min=document.getElementById('min');
+        let sec=document.getElementById('sec');
+
+         
+
+        setInterval(()=>{
+            let time=new Date();
+
+
+            console.log(time);
+
+            hrs.innerHTML=time.getHours();
+            min.innerHTML=time.getMinutes();
+            sec.innerHTML=time.getSeconds();    
+        },1000)
+
+       
+
+        
+    </script>
+</body>
+</html>
